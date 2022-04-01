@@ -19,3 +19,5 @@ class Sokoban:
 
 juego=Sokoban()
 print(juego.mapa)
+personaje_fila= 2 #fila en la que se encuentrael  persona
+
