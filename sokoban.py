@@ -19,8 +19,16 @@ class Sokoban:
 
 juego=Sokoban()
 print(juego.mapa)
-personaje_fila= 3 #fila en la que se encuentrael personaje
-personaje_columna= 9 #columna en la que se encuentra el persoaje 
-#variable que hubica la posicion del personaje en el mapa
-def imprimirMapa(self):#imprime el mapa
-for fila in self.mapa: #recorde la fila por el mapa
+personaje_fila= 0
+personaje_columna= 0
+def imprimirMapa(self):
+  for fila in self.mapa:
+    print(fila)
+def moverDerecha(self):
+  print("Mover Derecha")
+  # 5. personaje, espacio
+  if (sel.mapa[sel.persoaje_fila][self.persoaje_columna] == self.persoaje
+and self.mapa[self.personaje_fila][self.persoaje_columna + 1] ==self.espacio):
+
+
+    self
