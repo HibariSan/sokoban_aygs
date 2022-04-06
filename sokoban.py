@@ -1,34 +1,68 @@
 class Sokoban:
-  """
-  0_personaje
-  1_espacio
-  2_caja
-  3_pared
-  4_metas
-  5-persoaje_meta
-  6_caja_meta
-  """
+    """
+    0_personaje
+    1_espacio
+    2_caja
+    3_pared
+    4_metas
+    5-persoaje_meta
+    6_caja_meta
+    """
   
-  mapa=[
-    [3,3,3,3,3],
-    [3,1,1,1,1,3],
-    [3,1,1,0,1,3],
-    [3,1,1,1,1,3],
-    [3,3,3,3,3,3],
-  ]
+    mapa=[
+        [3,3,3,3,3],
+        [3,1,1,1,1,3],
+        [3,1,1,0,1,3],
+        [3,1,1,1,1,3],
+        [3,3,3,3,3,3],
+    ]
 
-juego=Sokoban()
-print(juego.mapa)
-personaje_fila= 0
-personaje_columna= 0
-def imprimirMapa(self):
-  for fila in self.mapa:
+    juego=Sokoban()
+    print(juego.mapa)
+    personaje_fila= 0
+    personaje_columna= 0
+    def imprimirMapa(self):
+    for fila in self.mapa:
     print(fila)
-def moverDerecha(self):
-  print("Mover Derecha")
-  # 5. personaje, espacio
-  if (sel.mapa[sel.persoaje_fila][self.persoaje_columna] == self.persoaje
-and self.mapa[self.personaje_fila][self.persoaje_columna + 1] ==self.espacio):
+    def moverDerecha(self):
+    print("Mover Derecha")
+          # 5. personaje, espacio
+          if (self.mapa[self.personaje_fila][self.personaje_columna]== self.personaje and self.mapa[self.personaje_fila][self.columna + 1]== self.espacio):
+            self.mapa[self.personaje_fila][self.personaje_columna]= self.espacio
+            self.mapa[self.personaje_fila][self.personaje_columna + 1]= self.personaje
+            self.personaje_columna += 1
+    # 6. personaje, meta
+    elif (self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.persoanje_columna + 1] == 4):
+    self.mapa[self.personaje_fila][self.personaje_columna]= 1
+    self.mapa[self.personaje_fila][self.personaje_colunma + 1] = 5
+    self.personaje_colunma += 1
 
-
-    self
+    def moverIzquierda(self):
+    prit("Mover izquierda")
+    
+    def moverArriba(self):
+    prit("Mover arriba")
+    
+    def moverAbajo(self):
+    prit("Mover abajo")
+    
+    def jugar(self):
+    instrucciones="a-izquierda\nd-derecha\nw-arriba\ns-abajo"
+    prit(instrucciones)
+    self.leerMapa()
+    while True:
+    self.imprimirMapa()
+    movimiento = input("Mover Hacia: ")
+    if movimiento == "d":
+    self.moverDerecha()
+    elif movimiento == "a":
+    self.moverIzquierda()
+    elif movimiento == "w":
+    self.moverArriba()
+    elif movimiento == "s":
+    self.moverAbajo()
+    elif movimiento == "q":
+      print("salir del juego")
+      break
+    juego = Sokoban()
+    juego.jugar()
