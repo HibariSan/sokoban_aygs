@@ -10,9 +10,10 @@ class Sokoban:
     """
   
     mapa=[]
+    
 
-    personaje_fila= 0
-    personaje_columna= 0
+    personaje_fila= 2
+    personaje_columna= 3
     
     def leerMapa(self):
         self.mapa=[
@@ -31,11 +32,12 @@ class Sokoban:
             
     def moverDerecha(self):
         print("Mover Derecha")
-          # 5. personaje, espacio
-        if (self.mapa[self.personaje_fila][self.personaje_columna]== self.personaje and self.mapa[self.personaje_fila][self.columna + 1]== self.espacio):
-            self.mapa[self.personaje_fila][self.personaje_columna]= self.espacio
-            self.mapa[self.personaje_fila][self.personaje_columna + 1]= self.personaje
+          # 0 personaje.espacio
+        if (self.mapa[self.personaje_fila][self.personaje_columna]== 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1]== 1):
+            self.mapa[self.personaje_fila][self.personaje_columna]= 1
+            self.mapa[self.personaje_fila][self.personaje_columna + 1]= 0
             self.personaje_columna += 1
+            print("# personaje.espacio derecha")
     # 6. personaje, meta
         elif (self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.persoanje_columna + 1] == 4):
             self.mapa[self.personaje_fila][self.personaje_columna]= 1
