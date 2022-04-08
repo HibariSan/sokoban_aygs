@@ -13,13 +13,13 @@ class Sokoban:
     
 
     personaje_fila= 2
-    personaje_columna= 3
+    personaje_columna= 1
     
     def leerMapa(self):
         self.mapa=[
-        [3,3,3,3,3],
+        [3,3,3,3,3,3],
         [3,1,1,1,1,3],
-        [3,1,1,0,1,3],
+        [3,0,1,4,1,3],
         [3,1,1,1,1,3],
         [3,3,3,3,3,3],
     ]
@@ -38,12 +38,13 @@ class Sokoban:
             self.mapa[self.personaje_fila][self.personaje_columna + 1]= 0
             self.personaje_columna += 1
             print("# personaje.espacio derecha")
-    # 6. personaje, meta
-        elif (self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.persoanje_columna + 1] == 4):
-            self.mapa[self.personaje_fila][self.personaje_columna]= 1
-            self.mapa[self.personaje_fila][self.personaje_colunma + 1] = 5
-            self.personaje_colunma += 1
-
+    # 1. personaje, meta
+        elif (self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 1
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] = 5
+            self.personaje_columna += 1 
+            print("personaje,meta derecha") #actuliza el movimiento del personaje
+    #
     def moverIzquierda(self):
         print("Mover izquierda")
     
