@@ -51,7 +51,8 @@ class Sokoban:
             self.mapa[self.personaje_fila][self.personaje_columna + 2] = 2
             self.personaje_columna += 1
             print("personaje,caja,espacio derecha")
-            
+    # 3. personaje,caja,meta
+        elif(self.mapa[self.personaje_fila][self.personaje_colunma] == 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and 
     def moverIzquierda(self):
         print("Mover izquierda")
     
