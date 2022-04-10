@@ -52,7 +52,33 @@ class Sokoban:
             self.personaje_columna += 1
             print("personaje,caja,espacio derecha")
     # 3. personaje,caja,meta
-        elif(self.mapa[self.personaje_fila][self.personaje_colunma] == 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and 
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 4
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] = 0
+            self.mapa[self.personaje_fila][self.personaje_columna + 2] = 6
+            self.personaje_columna += 1
+            print("personaje,caja,espacio derecha")
+    # 4. personaje,caja_meta,espacio
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 1
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] = 0
+            self.mapa[self.personaje_fila][self.personaje_columna + 2] = 1
+            self.persoanje_columna += 1
+            print("personaje,caja_meta,espacio")
+    # 5. personaje,caja_meta,meta
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 0 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 1
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] = 6 
+            self.mapa[self.personaje_fila][self.persoanje_columna + 2] = 5
+            self.personaje_columna += 1
+            print("personaje,caja_meta,meta")
+    
+             
     def moverIzquierda(self):
         print("Mover izquierda")
     
