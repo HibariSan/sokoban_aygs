@@ -104,6 +104,7 @@ self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
             self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4
             self.mapa[self.personaje_fila][self.personaje_columna + 2] == 0
             self.personaje_columna += 2
+            print("personaje_meta,caja,espacio")
              
              
     def moverIzquierda(self):
