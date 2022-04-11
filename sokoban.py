@@ -77,7 +77,34 @@ self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4):
             self.mapa[self.personaje_fila][self.persoanje_columna + 2] = 5
             self.personaje_columna += 1
             print("personaje,caja_meta,meta")
-    
+    # 6. personaje_meta,espacio
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 5
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] = 1
+            self.mapa[self.personaje_fila][self.persoanje_columna + 2] = 4
+            self.personaje_columna += 0
+            print("personaje_meta,espacio")
+    # 7. personaje_meta,meta
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and  self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] == 5
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4
+            self.mapa[self.personaje_fila][self.personaje_columna + 2] == 4
+            self.personaje_columna += 5
+            print("personaje_meta,espacio")
+    # 8. personaje_meta,caja,espacio
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] == 5
+            self.mapa[self.personaje_fila][self.personaje_columna] == 2
+            self.mpap[self.personaje_fila][self.personaje_columna] == 1
+            self.mapa[self.personaje_fila][self.personaje_columna + 1] == 4
+            self.mapa[self.personaje_fila][self.personaje_columna + 2] == 0
+            self.personaje_columna += 2
+             
              
     def moverIzquierda(self):
         print("Mover izquierda")
