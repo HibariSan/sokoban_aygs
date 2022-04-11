@@ -105,7 +105,10 @@ self.mapa[self.personaje_fila][self.personaje_columna + 2] == 1):
             self.mapa[self.personaje_fila][self.personaje_columna + 2] == 0
             self.personaje_columna += 2
             print("personaje_meta,caja,espacio")
-             
+    # 9. personaje_meta,meta
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0
+self.mapa[self.personaje_fila][self.personaje_columna + 1] == 2 and
+
              
     def moverIzquierda(self):
         print("Mover izquierda")
