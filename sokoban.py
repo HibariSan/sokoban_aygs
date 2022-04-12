@@ -217,6 +217,25 @@ class Sokoban:
             self.mapa[self.personaje_fila][self.personaje_columna] = 0
             self.personaje_columna -= 1
             print("espacio,caja_meta,personaje arriba")
+    # 27. meta,caja_meta,personaje
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 6 and self.mapa[self.personaje_fila][self.personaje_columna - 1] == 5 and self.mapa[self.personaje_fila][self.personaje_columna - 2] == 1):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 4
+            self.mapa[self.personaje_fila][self.personaje_columna] = 6
+            self.mapa[self.personaje_fila][self.personaje_columna] = 0
+            self.personaje_columna -= 1
+            print("meta,caja_meta,personaje")
+    # 28. espacio,personaje_meta
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 0 and self.mapa[self.personaje_fila][self.personaje_columna - 1] == 4):
+            self.mapa[self.personaje_fila][self.personaje_columna] =1
+            self.mapa[self.personaje_fila][self.personaje_columna] = 5
+            self.personaje_columna -= 1
+            print("espacio,personaje_meta")
+    # 29. meta,personaje_meta 
+        elif(self.mapa[self.personaje_fila][self.personaje_columna] == 5 and self.mapa[self.personaje_fila][self.personaje_columna - 1] == 4):
+            self.mapa[self.personaje_fila][self.personaje_columna] = 4
+            self.mapa[self.personaje_fila][self.personaje_columna] = 5
+            self.personaje_columna -= 1
+            print("meta,personaje_meta")
     def moverAbajo(self):
         print("Mover abajo")
     
